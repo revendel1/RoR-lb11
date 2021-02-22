@@ -1,0 +1,7 @@
+<p>Введите числo:</p>
+<%= form_tag("/mersen/output", :method => "get") do %>
+  <p> <%= text_field_tag(:data)%></p>
+  <%= submit_tag("Найти числа") %>
+<% end %>
+
+<p><%= link_to t(:Show_as_xml), mersen_all_url(format: :xml) %></p>

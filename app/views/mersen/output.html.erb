@@ -1,0 +1,22 @@
+<p> <%= @way %> </p>
+<% if (@result.size > 0) %> 
+    <p> Количество чисел: <%= @result.size %></p>
+    <span>Список чисел Мерсена:</span>
+    <table border="1">
+        <tr>
+            <th>Номер</th>
+            <th>Число</th>
+        </tr>
+        <% @result.each do |line| %>
+            <tr>
+                <% line.each do |cell| %>
+                    <td> <%= cell %> </td>
+                <% end %>
+            </tr>
+        <% end %>
+    </table>
+<% else %>
+  <p>Ошибка ввода</p>
+<% end %>
+
+<p> <%= link_to "Ввести другое число", :mersen_input %> </p>
